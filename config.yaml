@@ -1,0 +1,15 @@
+# ---- Phase 0: calibration sanity config ----
+scene_image: "data/c2_0_0_00_1.jpg"   # copy your c2 snapshot here
+calibration: "calib/c2.json"          # you create this from your AvaCar calibration
+output_dir: "outputs/phase0"
+
+# Sanity geometry. Units = meters. Assumes the road is the plane z = 0 in world
+# coordinates, and c2.json maps world -> camera (x_cam = R @ X_world + t).
+# Adjust ranges to roughly cover the visible road in the c2 image.
+grid:
+  x_range: [-5.0, 20.0]   # along the road (depth)
+  y_range: [-6.0, 6.0]    # across the road (lateral)
+  step: 1.0               # 1 m grid spacing
+cube:
+  size: 1.0               # a 1 m reference cube
+  center_xy: [5.0, 0.0]   # where to drop it on z=0 (x, y)

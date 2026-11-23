@@ -1,0 +1,16 @@
+# --- Phase 0, 2-4 (CPU only: calibration, compositing, shadow, video) ---
+numpy
+opencv-python
+pyyaml
+matplotlib
+scipy
+trimesh        # CAD loading + Chamfer eval (Phase 1 eval)
+imageio
+imageio-ffmpeg # drive.mp4 encoding (Phase 3)
+
+# --- Phase 1+ (GPU: Gaussian Splatting asset training/rendering) ---
+# Install these only when you reach Phase 1. gsplat needs a CUDA toolchain;
+# on Windows prefer WSL2 or a cloud GPU. Uncomment when ready:
+# torch           # match your CUDA version
+# gsplat
+# pytorch3d       # optional: CAD -> multi-view render path
