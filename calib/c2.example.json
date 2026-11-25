@@ -1,0 +1,11 @@
+{
+  "_comment": "Copy to c2.json and fill from your AvaCar calibration for camera 2. Convention assumed by phase0_sanity.py: x_cam = R @ X_world + t (world->camera), road plane is z=0 in world. If your calibration uses a different convention, convert here or adjust the script.",
+  "image_size": [1600, 900],
+  "K": [[1200.0, 0.0, 800.0],
+        [0.0, 1200.0, 450.0],
+        [0.0, 0.0, 1.0]],
+  "R": [[1.0, 0.0, 0.0],
+        [0.0, 1.0, 0.0],
+        [0.0, 0.0, 1.0]],
+  "t": [0.0, 0.0, 10.0]
+}
